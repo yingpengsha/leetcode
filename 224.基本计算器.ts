@@ -5,14 +5,30 @@
  */
 
 // @lc code=start
-const RE = /^([0-9]+|[\(|\)|\+|\-])(.*)/
+const SymbolList = new Set(['(', ')', '+', '-'])
+function getHeadAndTail(s: string) {
+  let start = 0
+  while (s[start] !== ' ') start++
+  if (SymbolList.has[start]) {
+    return {
+      head: s[start],
+      tail: s.substring(start + 1)
+    }
+  } else {
+    let end = start + 1
+    while (SymbolList.has(s[end])) end++
+    return {
+      head: s.substring(start, end),
+      tail: s.substring(end)
+    }
+  }
+}
 function calculate(s: string): number {
   const signs = [1]
   let currentSign = 1
   let sum = 0
-  s = s.replace(/\s+/g, '')
   while (s.length) {
-    const [_, head, tail] = s.match(RE)
+    const { head, tail } = getHeadAndTail(s)
 
     if (head === '+') {
       currentSign = 1
@@ -21,7 +37,7 @@ function calculate(s: string): number {
     } else if (head === '(') {
       signs.unshift(currentSign * signs[0])
       currentSign = 1
-    } else  if (head === ')') {
+    } else if (head === ')') {
       signs.shift()
       currentSign = 1
     } else {

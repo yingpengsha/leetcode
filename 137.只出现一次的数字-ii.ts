@@ -8,11 +8,9 @@
 function singleNumber(nums: number[]): number {
   let pre = 0
   let cache = 0
-  for (let i = 0; i < nums.length; i++) {
-    let num = nums[i] ^ (nums[i] & cache)
-    cache ^= nums[i] & cache
-    cache |= (pre & num)
-    pre ^= num
+  for (const num of nums) {
+    cache ^= num & cache | pre & num
+    pre ^= num ^ num & cache
   }
   return pre
 };

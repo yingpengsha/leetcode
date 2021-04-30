@@ -13,8 +13,7 @@ class UnionSet {
   }
 
   find(index: number): number {
-    if (index === this.father[index]) return index
-    return this.find(this.father[index])
+    return this.father[index] = this.father[index] === index ? index : this.find(this.father[index])
   }
 
   merge(a: number, b: number) {

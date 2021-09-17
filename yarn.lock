@@ -1058,6 +1058,25 @@ emoji-regex@^8.0.0:
   resolved "https://registry.nlark.com/emoji-regex/download/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
   integrity sha1-6Bj9ac5cz8tARZT4QpY79TFkzDc=
 
+esbuild-node-loader@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.nlark.com/esbuild-node-loader/download/esbuild-node-loader-0.3.1.tgz#fa761e020eff316549ddc3c51a25ec9ffc159ff2"
+  integrity sha1-+nYeAg7/MWVJ3cPFGiXsn/wVn/I=
+  dependencies:
+    esbuild "^0.12.6"
+
+esbuild-register@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.nlark.com/esbuild-register/download/esbuild-register-3.0.0.tgz#874156f95cac7c1720d6d24cbd78c599bf35ac74"
+  integrity sha1-h0FW+VysfBcg1tJMvXjFmb81rHQ=
+  dependencies:
+    jsonc-parser "^3.0.0"
+
+esbuild@^0.12.20, esbuild@^0.12.6:
+  version "0.12.28"
+  resolved "https://registry.nlark.com/esbuild/download/esbuild-0.12.28.tgz?cache=0&sync_timestamp=1631587318573&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fesbuild%2Fdownload%2Fesbuild-0.12.28.tgz#84da0d2a0d0dee181281545271e0d65cf6fab1ef"
+  integrity sha1-hNoNKg0N7hgSgVRSceDWXPb6se8=
+
 escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.npm.taobao.org/escalade/download/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
@@ -1084,6 +1103,16 @@ escodegen@^2.0.0:
     optionator "^0.8.1"
   optionalDependencies:
     source-map "~0.6.1"
+
+esno@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.nlark.com/esno/download/esno-0.9.1.tgz#106acb342a98b5e8d2a7cf528f6a149753a25e01"
+  integrity sha1-EGrLNCqYtejSp89Sj2oUl1OiXgE=
+  dependencies:
+    cross-spawn "^7.0.3"
+    esbuild "^0.12.20"
+    esbuild-node-loader "^0.3.1"
+    esbuild-register "^3.0.0"
 
 esprima@^4.0.0, esprima@^4.0.1:
   version "4.0.1"
@@ -1885,6 +1914,11 @@ json5@2.x, json5@^2.1.2:
   integrity sha1-Lf7+cgxrpSXZ69kJlQ8FFTFsiaM=
   dependencies:
     minimist "^1.2.5"
+
+jsonc-parser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/jsonc-parser/download/jsonc-parser-3.0.0.tgz#abdd785701c7e7eaca8a9ec8cf070ca51a745a22"
+  integrity sha1-q914VwHH5+rKip7IzwcMpRp0WiI=
 
 kleur@^3.0.3:
   version "3.0.3"

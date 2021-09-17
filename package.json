@@ -17,6 +17,7 @@
   "homepage": "https://github.com/yingpengsha/leetcode#readme",
   "devDependencies": {
     "@types/jest": "^26.0.23",
+    "esno": "^0.9.1",
     "jest": "^27.0.4",
     "random": "^3.0.6",
     "ts-jest": "^27.0.3",

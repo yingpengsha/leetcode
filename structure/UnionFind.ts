@@ -15,10 +15,3 @@ class UnionFind {
     return this.father[this.find(a)] = this.find(b)
   }
 }
-
-class UnionMapFind {
-  father = new Map<string, string>()
-  constructor(signs: string[]) {
-    
-  }
-}

@@ -1,4 +1,4 @@
-function getLeastNumbers(arr: number[], k: number): number[] {
+function getLeastNumbers (arr: number[], k: number): number[] {
   for (let i = 0; i < k; i++) {
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[j] < arr[i]) {

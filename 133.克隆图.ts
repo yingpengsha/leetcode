@@ -14,12 +14,12 @@
 //     }
 // }
 
-function cloneGraph(node: Node | null, clonedNodes = new WeakMap<Node, Node>()): Node | null {
-  if (!node) return node 
+function cloneGraph (node: Node | null, clonedNodes = new WeakMap<Node, Node>()): Node | null {
+  if (!node) return node
   const newNode = new Node(node.val)
   clonedNodes.set(node, newNode)
   for (let i = 0; i < node.neighbors.length; i++) {
-    const neighbor = node.neighbors[i];
+    const neighbor = node.neighbors[i]
     if (clonedNodes.has(neighbor)) {
       newNode.neighbors.push(clonedNodes.get(neighbor))
     } else {
@@ -29,4 +29,3 @@ function cloneGraph(node: Node | null, clonedNodes = new WeakMap<Node, Node>()):
   return newNode
 };
 // @lc code=end
-

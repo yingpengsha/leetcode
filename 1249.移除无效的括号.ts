@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-function minRemoveToMakeValid(s: string): string {
+function minRemoveToMakeValid (s: string): string {
   let resultOne = ''
   let count = 0
   for (let i = 0; i < s.length; i++) {
-    const char = s[i];
+    const char = s[i]
     if (char !== ')') {
       if (char === '(') {
         count += 1
@@ -23,7 +23,7 @@ function minRemoveToMakeValid(s: string): string {
   let resultTwo = ''
   count = 0
   for (let i = resultOne.length - 1; i >= 0; i--) {
-    const char = resultOne[i];
+    const char = resultOne[i]
     if (char !== '(') {
       if (char === ')') {
         count += 1
@@ -37,4 +37,3 @@ function minRemoveToMakeValid(s: string): string {
   return resultTwo
 };
 // @lc code=end
-

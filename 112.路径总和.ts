@@ -19,16 +19,15 @@
  * }
  */
 
-function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
+function hasPathSum (root: TreeNode | null, targetSum: number): boolean {
   if (!root) return false
   return getLeafSum(root, targetSum, 0)
 };
 
-function getLeafSum(root: TreeNode, targetSum: number, beforeValue: number): boolean {
+function getLeafSum (root: TreeNode, targetSum: number, beforeValue: number): boolean {
   if (!root.left && !root.right) return beforeValue + root.val === targetSum
   const left = root.left ? getLeafSum(root.left, targetSum, beforeValue + root.val) : false
   const right = root.right ? getLeafSum(root.right, targetSum, beforeValue + root.val) : false
   return left || right
 }
 // @lc code=end
-

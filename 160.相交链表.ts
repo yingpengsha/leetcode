@@ -17,7 +17,7 @@
  * }
  */
 
-function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): ListNode | null {
+function getIntersectionNode (headA: ListNode | null, headB: ListNode | null): ListNode | null {
   const NodeMap = new WeakSet()
   while (headA) {
     NodeMap.add(headA)
@@ -32,4 +32,3 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
   return null
 };
 // @lc code=end
-

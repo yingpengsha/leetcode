@@ -9,7 +9,7 @@
 //   return s.split(' ').filter(Boolean).reverse().join(' ')
 // };
 
-function getHeadAndTail(s: string) {
+function getHeadAndTail (s: string) {
   let start = 0
   while (s[start] === ' ') start++
   let end = start + 1
@@ -19,7 +19,7 @@ function getHeadAndTail(s: string) {
     tail: s.substring(end)
   }
 }
-function reverseWords(s: string): string {
+function reverseWords (s: string): string {
   let result = ''
   while (s.length) {
     const { head, tail } = getHeadAndTail(s)
@@ -35,4 +35,3 @@ function reverseWords(s: string): string {
   return result
 };
 // @lc code=end
-

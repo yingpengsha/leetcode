@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function backspaceCompare(S: string, T: string): boolean {
+function backspaceCompare (S: string, T: string): boolean {
   const SStack: string[] = []
   const TStack: string[] = []
   for (let i = 0; i < S.length; i++) {
@@ -25,4 +25,3 @@ function backspaceCompare(S: string, T: string): boolean {
   return SStack.join('') === TStack.join('')
 };
 // @lc code=end
-

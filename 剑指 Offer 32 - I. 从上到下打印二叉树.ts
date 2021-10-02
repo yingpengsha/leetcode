@@ -12,7 +12,7 @@
  * }
  */
 
-function levelOrder(root: TreeNode | null): number[] {
+function levelOrder (root: TreeNode | null): number[] {
   if (!root) return []
   const stack = [root]
   const result = [root.val]

@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-function countSmaller(nums: number[]): number[] {
+function countSmaller (nums: number[]): number[] {
   if (!nums.length) return []
   const counts = Array(nums.length).fill(0)
-  const map = nums.map((value, index) => ({value, index}))
-  function mergeSort(left = 0, right = map.length - 1) {
+  const map = nums.map((value, index) => ({ value, index }))
+  function mergeSort (left = 0, right = map.length - 1) {
     if (left >= right) return
     const mid = (right + left) >> 1
     mergeSort(left, mid)
@@ -36,4 +36,3 @@ function countSmaller(nums: number[]): number[] {
   return counts
 };
 // @lc code=end
-

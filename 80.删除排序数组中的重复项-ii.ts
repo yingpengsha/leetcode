@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function removeDuplicates(nums: number[]): number {
+function removeDuplicates (nums: number[]): number {
   let one = NaN
   let two = NaN
   for (let i = 0; i < nums.length; i++) {
@@ -15,10 +15,9 @@ function removeDuplicates(nums: number[]): number {
       two = nums[i]
     } else {
       nums.splice(i, 1)
-      i-=1
+      i -= 1
     }
   }
   return nums.length
 };
 // @lc code=end
-

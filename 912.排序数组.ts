@@ -5,12 +5,12 @@
  */
 
 // @lc code=start
-function sortArray(nums: number[]): number[] {
+function sortArray (nums: number[]): number[] {
   quickSort(nums, 0, nums.length - 1)
   return nums
 };
 
-function quickSort(arr: number[], left: number, right: number) {
+function quickSort (arr: number[], left: number, right: number) {
   if (left >= right) return
   let x = left
   let y = right
@@ -24,7 +24,5 @@ function quickSort(arr: number[], left: number, right: number) {
   arr[x] = base
   quickSort(arr, left, x - 1)
   quickSort(arr, x + 1, right)
-  return
 }
 // @lc code=end
-

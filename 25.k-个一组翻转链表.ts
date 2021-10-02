@@ -17,7 +17,7 @@
  * }
  */
 
- function isCanReverse(head: ListNode, count: number): boolean {
+function isCanReverse (head: ListNode, count: number): boolean {
   let actualCount = 0
   while (head && actualCount < count) {
     actualCount++
@@ -26,7 +26,7 @@
   return actualCount >= count
 }
 
-function reverseN(head: ListNode, count: number): { head: ListNode, tail: ListNode | null } {
+function reverseN (head: ListNode, count: number): { head: ListNode, tail: ListNode | null } {
   if (count === 1) return { head, tail: head }
   const last = reverseN(head.next, --count).head
   const lastNext = head.next.next
@@ -38,11 +38,10 @@ function reverseN(head: ListNode, count: number): { head: ListNode, tail: ListNo
   }
 }
 
-function reverseKGroup(head: ListNode, count: number): ListNode {
+function reverseKGroup (head: ListNode, count: number): ListNode {
   if (!head || !head.next || !count || !isCanReverse(head, count)) return head
   const { head: newHead, tail: newTail } = reverseN(head, count)
   newTail.next = reverseKGroup(newTail.next, count)
   return newHead
 }
 // @lc code=end
-

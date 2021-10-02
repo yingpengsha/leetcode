@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function clumsy(N: number): number {
+function clumsy (N: number): number {
   const signs = ['*', '/', '+', '-']
   const numberStack = [N]
   const signStack = []
@@ -15,23 +15,23 @@ function clumsy(N: number): number {
     switch (sign) {
       case '*':
         numberStack.push(numberStack.pop() * number)
-        break;
+        break
       case '/':
         numberStack.push(Math.floor(numberStack.pop() / number))
-        break;
+        break
       default:
         if (signStack.length) {
           const lastSign = signStack.pop()
           const topNumber = numberStack.pop()
           if (lastSign === '-') {
             numberStack.push(numberStack.pop() - topNumber)
-          } else {            
+          } else {
             numberStack.push(numberStack.pop() + topNumber)
           }
         }
         numberStack.push(number)
         signStack.push(sign)
-        break;
+        break
     }
   }
   if (signStack.length) {
@@ -39,11 +39,10 @@ function clumsy(N: number): number {
     const topNumber = numberStack.pop()
     if (lastSign === '-') {
       numberStack.push(numberStack.pop() - topNumber)
-    } else {            
+    } else {
       numberStack.push(numberStack.pop() + topNumber)
     }
   }
   return numberStack[0]
 };
 // @lc code=end
-

@@ -5,18 +5,18 @@
  */
 
 // @lc code=start
-function findOrder(numCourses: number, prerequisites: number[][]): number[] {
+function findOrder (numCourses: number, prerequisites: number[][]): number[] {
   const inDegreeCounts = Array(numCourses).fill(0)
   const outDegreeCollections: number[][] = inDegreeCounts.map(() => [])
   for (let i = 0; i < prerequisites.length; i++) {
-    const [one, two] = prerequisites[i];
+    const [one, two] = prerequisites[i]
     inDegreeCounts[one] += 1
     outDegreeCollections[two].push(one)
   }
 
   const queue: number[] = []
   for (let i = 0; i < inDegreeCounts.length; i++) {
-    const inDegreeCount = inDegreeCounts[i];
+    const inDegreeCount = inDegreeCounts[i]
     if (inDegreeCount === 0) {
       queue.push(i)
     }
@@ -27,7 +27,7 @@ function findOrder(numCourses: number, prerequisites: number[][]): number[] {
     const idx = queue.shift()
     result.push(idx)
     for (let i = 0; i < outDegreeCollections[idx].length; i++) {
-      const outDegreeIdx = outDegreeCollections[idx][i];
+      const outDegreeIdx = outDegreeCollections[idx][i]
       inDegreeCounts[outDegreeIdx] -= 1
       if (inDegreeCounts[outDegreeIdx] === 0) {
         queue.push(outDegreeIdx)
@@ -39,4 +39,3 @@ function findOrder(numCourses: number, prerequisites: number[][]): number[] {
     : []
 }
 // @lc code=end
-

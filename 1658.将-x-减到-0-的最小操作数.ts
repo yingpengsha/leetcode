@@ -5,15 +5,15 @@
  */
 
 // @lc code=start
-function binarySearch(nums: number[], target: number, rightMax = nums.length - 1): number {
+function binarySearch (nums: number[], target: number, rightMax = nums.length - 1): number {
   let left = 0
-  let right = rightMax > nums.length - 1 ? nums.length - 1 :rightMax
+  let right = rightMax > nums.length - 1 ? nums.length - 1 : rightMax
   let mid = target
   while (left < right) {
     mid = (left + right) >> 1
     if (nums[mid] === target) {
       return mid + 1
-    } else if(nums[mid] > target) {
+    } else if (nums[mid] > target) {
       right = mid - 1
     } else {
       left = mid + 1
@@ -21,7 +21,7 @@ function binarySearch(nums: number[], target: number, rightMax = nums.length - 1
   }
   return nums[left] === target ? left + 1 : -1
 }
-function minOperations(nums: number[], x: number): number {
+function minOperations (nums: number[], x: number): number {
   const prefixSum = [nums[0]]
   const suffixSum = [nums[nums.length - 1]]
   for (let i = 1; i < nums.length; i++) {
@@ -54,4 +54,3 @@ function minOperations(nums: number[], x: number): number {
   return count
 };
 // @lc code=end
-

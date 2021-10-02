@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function nextGreatestLetter(letters: string[], target: string): string {
+function nextGreatestLetter (letters: string[], target: string): string {
   let left = 0
   let right = letters.length - 1
   const targetValue = target
@@ -29,4 +29,3 @@ function nextGreatestLetter(letters: string[], target: string): string {
   }
 };
 // @lc code=end
-

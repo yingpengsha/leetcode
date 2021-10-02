@@ -11,11 +11,11 @@ class Scheduler {
   private runningQueue: Task[] = []
   private pendingQueue: Task[] = []
 
-  constructor(count = 2) {
+  constructor (count = 2) {
     this.maxCount = count
   }
 
-  add(promiseCreator: () => Promise<unknown>): Promise<unknown> {
+  add (promiseCreator: () => Promise<unknown>): Promise<unknown> {
     return new Promise((resolve, reject) => {
       this.pendingQueue.push({
         fn: promiseCreator,
@@ -34,9 +34,9 @@ class Scheduler {
     })
   }
 
-  invoke() {
+  invoke () {
     if (this.hasWaitingTasks && this.invokeQueueNotFull) {
-      const currentTask = this.pendingQueue.shift() 
+      const currentTask = this.pendingQueue.shift()
       this.runningQueue.push(currentTask)
       currentTask.fn()
         .then(currentTask.resolve, currentTask.reject)
@@ -44,10 +44,11 @@ class Scheduler {
     }
   }
 
-  get invokeQueueNotFull(): boolean {
+  get invokeQueueNotFull (): boolean {
     return this.runningQueue.length < this.maxCount
   }
-  get hasWaitingTasks(): boolean {
+
+  get hasWaitingTasks (): boolean {
     return !!this.pendingQueue.length
   }
 }

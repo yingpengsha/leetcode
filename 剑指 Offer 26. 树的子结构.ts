@@ -13,7 +13,7 @@
  */
 
 // 先序遍历
-function isSubStructure(A: TreeNode | null, B: TreeNode | null): boolean {
+function isSubStructure (A: TreeNode | null, B: TreeNode | null): boolean {
   if (!B || !A) return false
   if (A.val === B.val && isMatch(A, B)) {
     return true
@@ -22,7 +22,7 @@ function isSubStructure(A: TreeNode | null, B: TreeNode | null): boolean {
   }
 };
 
-function isMatch(A: TreeNode, B: TreeNode): boolean {
+function isMatch (A: TreeNode, B: TreeNode): boolean {
   if (!A) return false
   if (A.val === B.val) {
     const left = B.left ? isMatch(A.left, B.left) : true

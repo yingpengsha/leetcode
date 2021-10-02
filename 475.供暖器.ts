@@ -5,12 +5,12 @@
  */
 
 // @lc code=start
-function findRadius(houses: number[], heaters: number[]): number {
+function findRadius (houses: number[], heaters: number[]): number {
   let max = 0
   let current = 0
   houses.sort((a, b) => a - b)
   heaters.sort((a, b) => a - b)
-  function binarySearch(place: number) {
+  function binarySearch (place: number) {
     let left = 0
     let right = heaters.length - 1
     let mid: number
@@ -45,4 +45,3 @@ function findRadius(houses: number[], heaters: number[]): number {
   return max
 };
 // @lc code=end
-

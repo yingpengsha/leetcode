@@ -5,12 +5,12 @@
  */
 
 // @lc code=start
-function searchInsert(nums: number[], target: number): number {
+function searchInsert (nums: number[], target: number): number {
   let left = 0
   let right = nums.length - 1
   let mid
   if (target > nums[right]) return nums.length
-  if (target< nums[left]) return 0
+  if (target < nums[left]) return 0
   while (left < right - 1) {
     mid = (left + right) >> 1
     if (nums[mid] === target) {
@@ -24,4 +24,3 @@ function searchInsert(nums: number[], target: number): number {
   return nums[left] < target ? left + 1 : left
 };
 // @lc code=end
-

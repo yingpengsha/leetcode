@@ -19,12 +19,12 @@
  * }
  */
 
-function isBalanced(root: TreeNode | null): boolean {
+function isBalanced (root: TreeNode | null): boolean {
   if (!root) return true
   return getTreeDeep(root) >= 0
 };
 
-function getTreeDeep(root: TreeNode): number{
+function getTreeDeep (root: TreeNode): number {
   if (!root) return -1
   const left = getTreeDeep(root.left) + 1
   if (left < 0) return -2
@@ -37,4 +37,3 @@ function getTreeDeep(root: TreeNode): number{
   }
 }
 // @lc code=end
-

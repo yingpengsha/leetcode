@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function getRow(rowIndex: number): number[] {
+function getRow (rowIndex: number): number[] {
   if (++rowIndex <= 2) return new Array(rowIndex).fill(1)
   let lastRow = []
   let currentRow = [1, 1]
@@ -20,4 +20,3 @@ function getRow(rowIndex: number): number[] {
   return currentRow
 };
 // @lc code=end
-

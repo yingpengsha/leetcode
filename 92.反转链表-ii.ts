@@ -14,7 +14,7 @@
 //   }
 // }
 
-function reverseN(head: ListNode | null, count: number): ListNode | null {
+function reverseN (head: ListNode | null, count: number): ListNode | null {
   if (count === 1) return head
   const latest = reverseN(head.next, --count)
   const latestNext = head.next.next
@@ -23,7 +23,7 @@ function reverseN(head: ListNode | null, count: number): ListNode | null {
   return latest
 }
 
-function reverseBetween(head: ListNode | null, left: number, right: number): ListNode | null {
+function reverseBetween (head: ListNode | null, left: number, right: number): ListNode | null {
   if (!head || !head.next || left === right) return head
   let newHead = new ListNode(0, head)
   let leftTemp = left
@@ -33,4 +33,3 @@ function reverseBetween(head: ListNode | null, left: number, right: number): Lis
   return left === 1 ? newHead.next : head
 };
 // @lc code=end
-

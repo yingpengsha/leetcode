@@ -19,7 +19,7 @@
  * }
  */
 
-function kthSmallest(root: TreeNode | null, k: number): number {
+function kthSmallest (root: TreeNode | null, k: number): number {
   const result = []
   const stack = [root]
   while (stack) {
@@ -43,4 +43,3 @@ function kthSmallest(root: TreeNode | null, k: number): number {
   }
 };
 // @lc code=end
-

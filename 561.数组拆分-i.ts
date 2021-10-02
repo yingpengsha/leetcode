@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function arrayPairSum(nums: number[]): number {
+function arrayPairSum (nums: number[]): number {
   nums = nums.sort((a, b) => a - b)
   let sum = 0
   for (let i = 0; i < nums.length; i += 2) {
@@ -14,4 +14,3 @@ function arrayPairSum(nums: number[]): number {
   return sum
 };
 // @lc code=end
-

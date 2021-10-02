@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function dailyTemperatures(T: number[]): number[] {
+function dailyTemperatures (T: number[]): number[] {
   const stack: number[] = []
   const result = new Array<number>(T.length)
   for (let i = 0; i < T.length; i++) {
@@ -19,4 +19,3 @@ function dailyTemperatures(T: number[]): number[] {
   return result
 };
 // @lc code=end
-

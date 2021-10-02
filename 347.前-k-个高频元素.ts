@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function topKFrequent(nums: number[], k: number): number[] {
+function topKFrequent (nums: number[], k: number): number[] {
   const numberMap = new Map<number, number>()
   const keys: number[] = []
   for (const value of nums) {
@@ -17,4 +17,3 @@ function topKFrequent(nums: number[], k: number): number[] {
   return keys.sort((a, b) => numberMap.get(b) - numberMap.get(a)).slice(0, k)
 };
 // @lc code=end
-

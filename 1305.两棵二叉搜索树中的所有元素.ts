@@ -19,7 +19,7 @@
  * }
  */
 
-function getValues(root: TreeNode | null): number[] {
+function getValues (root: TreeNode | null): number[] {
   if (!root) return []
   const result: number[] = []
   const stack = [root]
@@ -39,7 +39,7 @@ function getValues(root: TreeNode | null): number[] {
   return result
 }
 
-function getAllElements(root1: TreeNode | null, root2: TreeNode | null): number[] {
+function getAllElements (root1: TreeNode | null, root2: TreeNode | null): number[] {
   const list1 = getValues(root1)
   const list2 = getValues(root2)
   const result: number[] = []
@@ -53,4 +53,3 @@ function getAllElements(root1: TreeNode | null, root2: TreeNode | null): number[
   return result.concat(list1, list2)
 };
 // @lc code=end
-

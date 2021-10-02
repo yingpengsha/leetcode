@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function pivotIndex(nums: number[]): number {
+function pivotIndex (nums: number[]): number {
   let rightSum = 0
   nums.forEach(num => rightSum += num)
   let leftSum = 0
@@ -21,4 +21,3 @@ function pivotIndex(nums: number[]): number {
   return -1
 };
 // @lc code=end
-

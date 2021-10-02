@@ -21,29 +21,29 @@
 
 class BSTIterator {
     private collection: number[] = []
-    constructor(root: TreeNode | null) {
-        const stack = [root]
-        while (stack.length) {
-            while (stack[stack.length - 1].left) {
-                stack.push(stack[stack.length - 1].left)
-            }
-            while (stack[stack.length - 1] && !stack[stack.length - 1].right) {
-                this.collection.push(stack.pop().val)
-            }
-            if (stack.length) {
-                const node = stack.pop()
-                this.collection.push(node.val)
-                stack.push(node.right)
-            }
+    constructor (root: TreeNode | null) {
+      const stack = [root]
+      while (stack.length) {
+        while (stack[stack.length - 1].left) {
+          stack.push(stack[stack.length - 1].left)
         }
+        while (stack[stack.length - 1] && !stack[stack.length - 1].right) {
+          this.collection.push(stack.pop().val)
+        }
+        if (stack.length) {
+          const node = stack.pop()
+          this.collection.push(node.val)
+          stack.push(node.right)
+        }
+      }
     }
 
-    next(): number {
-        return this.collection.shift()
+    next (): number {
+      return this.collection.shift()
     }
 
-    hasNext(): boolean {
-        return !!this.collection.length
+    hasNext (): boolean {
+      return !!this.collection.length
     }
 }
 
@@ -54,4 +54,3 @@ class BSTIterator {
  * var param_2 = obj.hasNext()
  */
 // @lc code=end
-

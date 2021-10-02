@@ -5,37 +5,36 @@
  */
 
 // @lc code=start
-function lemonadeChange(bills: number[]): boolean {
+function lemonadeChange (bills: number[]): boolean {
   let b5 = 0
   let b10 = 0
   for (let i = 0; i < bills.length; i++) {
     switch (bills[i]) {
       case 5:
         b5++
-        break;
+        break
       case 10:
         if (!b5) return false
         b5--
         b10++
-        break;
+        break
       case 20:
         if (!b5) return false
         if (b10) {
           b10--
           b5--
-          break;
+          break
         }
         if (b5 > 2) {
           b5 -= 3
         } else {
-          return false;
+          return false
         }
-        break;
+        break
       default:
-        break;
+        break
     }
   }
   return true
 };
 // @lc code=end
-

@@ -16,7 +16,7 @@
 //   }
 // }
 
-function inorderTraversal(root: TreeNode | null): number[] {
+function inorderTraversal (root: TreeNode | null): number[] {
   if (!root) return []
   const result: number[] = []
   const stack: TreeNode[] = []
@@ -40,4 +40,3 @@ function inorderTraversal(root: TreeNode | null): number[] {
   return result
 };
 // @lc code=end
-

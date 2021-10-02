@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function twoSum(numbers: number[], target: number): number[] {
+function twoSum (numbers: number[], target: number): number[] {
   const sumMap = new Map()
   for (let i = 0; i < numbers.length; i++) {
     if (sumMap.has(target - numbers[i])) {
@@ -16,4 +16,3 @@ function twoSum(numbers: number[], target: number): number[] {
   }
 };
 // @lc code=end
-

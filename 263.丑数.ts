@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function isUgly(n: number): boolean {
+function isUgly (n: number): boolean {
   if (!n) return false
   while (n !== 1) {
     if (n / 2 === Math.ceil(n / 2)) {
@@ -21,4 +21,3 @@ function isUgly(n: number): boolean {
   return true
 };
 // @lc code=end
-

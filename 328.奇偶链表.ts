@@ -14,7 +14,7 @@
 //   }
 // }
 
-function oddEvenList(head: ListNode | null): ListNode | null {
+function oddEvenList (head: ListNode | null): ListNode | null {
   if (!head || !head.next || !head.next.next) return head
   let odd = head
   let even = head.next
@@ -27,4 +27,3 @@ function oddEvenList(head: ListNode | null): ListNode | null {
   return head
 };
 // @lc code=end
-

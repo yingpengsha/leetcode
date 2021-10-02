@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function buddyStrings(a: string, b: string): boolean {
+function buddyStrings (a: string, b: string): boolean {
   if (a.length !== b.length) return false
   const aCharMap = {}
   const bCharMap = {}
@@ -35,4 +35,3 @@ function buddyStrings(a: string, b: string): boolean {
   }
 };
 // @lc code=end
-

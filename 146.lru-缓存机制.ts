@@ -8,26 +8,26 @@
 class LRUCache {
     private size: number
     private map: Map<number, number>
-    constructor(capacity: number) {
-        this.size = capacity
-        this.map = new Map()
+    constructor (capacity: number) {
+      this.size = capacity
+      this.map = new Map()
     }
 
-    get(key: number): number {
-        if (!this.map.has(key)) return -1
-        const value = this.map.get(key)
-        this.map.delete(key)
-        this.map.set(key, value)
-        return value
+    get (key: number): number {
+      if (!this.map.has(key)) return -1
+      const value = this.map.get(key)
+      this.map.delete(key)
+      this.map.set(key, value)
+      return value
     }
 
-    put(key: number, value: number): void {
-        if (this.map.has(key)) this.map.delete(key)
-        this.map.set(key, value)
+    put (key: number, value: number): void {
+      if (this.map.has(key)) this.map.delete(key)
+      this.map.set(key, value)
 
-        if (this.map.size > this.size) {
-            this.map.delete(this.map.keys().next().value)
-        }
+      if (this.map.size > this.size) {
+        this.map.delete(this.map.keys().next().value)
+      }
     }
 }
 
@@ -38,4 +38,3 @@ class LRUCache {
  * obj.put(key,value)
  */
 // @lc code=end
-

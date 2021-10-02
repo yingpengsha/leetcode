@@ -5,15 +5,15 @@
  */
 
 // @lc code=start
-function findClosestElements(arr: number[], count: number, value: number): number[] {
+function findClosestElements (arr: number[], count: number, value: number): number[] {
   let left = 0
   let right = arr.length - 1
   let index: number
   while (left + 1 < right) {
     const mid = left + ((right - left) >> 1)
     if (arr[mid] === value) {
-        index = mid
-        break
+      index = mid
+      break
     }
     if (arr[mid] > value) {
       right = mid
@@ -34,7 +34,7 @@ function findClosestElements(arr: number[], count: number, value: number): numbe
   const result = [arr[index]]
   while (result.length !== count && (left > -1 || right < arr.length)) {
     const diff = value - (left === -1 ? -Infinity : arr[left]) - (right === arr.length ? Infinity : arr[right]) + value
-    if (diff <= 0 ) {
+    if (diff <= 0) {
       result.unshift(arr[left])
       left--
     } else {
@@ -45,4 +45,3 @@ function findClosestElements(arr: number[], count: number, value: number): numbe
   return result
 };
 // @lc code=end
-

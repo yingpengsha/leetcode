@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function minSubArrayLen(target: number, nums: number[]): number {
+function minSubArrayLen (target: number, nums: number[]): number {
   if (nums[0] >= target) return 1
   let start = 0
   let end = 0
@@ -17,7 +17,7 @@ function minSubArrayLen(target: number, nums: number[]): number {
       if (end - start + 1 < max) {
         max = end - start + 1
       }
-      sum-= nums[start]
+      sum -= nums[start]
       start++
     } else {
       end++
@@ -27,4 +27,3 @@ function minSubArrayLen(target: number, nums: number[]): number {
   return max === Infinity ? 0 : max
 };
 // @lc code=end
-

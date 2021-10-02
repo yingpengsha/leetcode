@@ -5,13 +5,13 @@
  */
 
 // @lc code=start
-function longestPalindrome(s: string): string {
+function longestPalindrome (s: string): string {
   if (!s || s.length === 1) return s
   const dp: number[][] = []
   let maxStr = ''
   for (let i = 0; i < s.length; i++) {
     dp[i] = []
-    const endChar = s[i];
+    const endChar = s[i]
     for (let j = i; j >= 0; j--) {
       const startChar = s[j]
       if (i === j) {
@@ -22,7 +22,7 @@ function longestPalindrome(s: string): string {
         } else if (dp[i - 1][j + 1]) {
           dp[i][j] = dp[i - 1][j + 1] + 2
         }
-      }else {
+      } else {
         dp[i][j] = 0
       }
       if (dp[i][j] > maxStr.length) {
@@ -33,4 +33,3 @@ function longestPalindrome(s: string): string {
   return maxStr
 };
 // @lc code=end
-

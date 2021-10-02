@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function mySqrt(x: number): number {
+function mySqrt (x: number): number {
   if (x < 2) return x
   let left = 1
   let right = x - 1
@@ -24,4 +24,3 @@ function mySqrt(x: number): number {
   return left
 };
 // @lc code=end
-

@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function getHeadAndTail(s: string) {
+function getHeadAndTail (s: string) {
   let end = 1
   if (s[0] === ' ') {
     while (s[end] && s[end] === ' ') end++
@@ -25,7 +25,7 @@ function getHeadAndTail(s: string) {
     }
   }
 }
-function reverseWords(s: string): string {
+function reverseWords (s: string): string {
   let result = ''
   while (s.length) {
     const { head, tail } = getHeadAndTail(s)
@@ -35,4 +35,3 @@ function reverseWords(s: string): string {
   return result
 };
 // @lc code=end
-

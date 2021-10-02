@@ -10,11 +10,11 @@ class MyCircularQueue {
     private head = 0
     private tail = 0
     private count = 0
-    constructor(k: number) {
+    constructor (k: number) {
       this.queue = new Array(k)
     }
 
-    enQueue(value: number): boolean {
+    enQueue (value: number): boolean {
       if (this.isFull()) return false
       this.count++
       this.queue[this.tail] = value
@@ -26,7 +26,7 @@ class MyCircularQueue {
       return true
     }
 
-    deQueue(): boolean {
+    deQueue (): boolean {
       if (this.isEmpty()) return false
       this.count--
       if (this.head === this.size - 1) {
@@ -37,29 +37,29 @@ class MyCircularQueue {
       return true
     }
 
-    Front(): number {
+    Front (): number {
       if (this.isEmpty()) {
         return -1
       }
       return this.queue[this.head]
     }
 
-    Rear(): number {
+    Rear (): number {
       if (this.isEmpty()) {
         return -1
       }
       return this.queue[this.tail === 0 ? this.size - 1 : this.tail - 1]
     }
 
-    isEmpty(): boolean {
+    isEmpty (): boolean {
       return this.count === 0
     }
 
-    isFull(): boolean {
+    isFull (): boolean {
       return this.count === this.size
     }
 
-    get size(): number {
+    get size (): number {
       return this.queue.length
     }
 }
@@ -75,4 +75,3 @@ class MyCircularQueue {
  * var param_6 = obj.isFull()
  */
 // @lc code=end
-

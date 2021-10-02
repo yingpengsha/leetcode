@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function numIslands(grid: string[][]): number {
+function numIslands (grid: string[][]): number {
   const islands: string[] = []
   const xMax = grid[0].length
   const yMax = grid.length
@@ -20,12 +20,12 @@ function numIslands(grid: string[][]): number {
   return islands.length
 };
 
-function BFS(grid: string[][], x: number, y: number, xMax: number, yMax: number, sign: string) {
+function BFS (grid: string[][], x: number, y: number, xMax: number, yMax: number, sign: string) {
   grid[y][x] = sign.toString()
   // top
   if (y > 0) {
     if (grid[y - 1][x] === '1') {
-      BFS(grid, x, y-1, xMax, yMax, sign)
+      BFS(grid, x, y - 1, xMax, yMax, sign)
     }
   }
   // right
@@ -42,10 +42,9 @@ function BFS(grid: string[][], x: number, y: number, xMax: number, yMax: number,
   }
   // left
   if (x > 0) {
-    if (grid[y][x -1] === '1') {
+    if (grid[y][x - 1] === '1') {
       BFS(grid, x - 1, y, xMax, yMax, sign)
     }
   }
 }
 // @lc code=end
-

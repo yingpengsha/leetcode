@@ -16,7 +16,7 @@
 //   }
 // }
 
-function copyRandomList(head: Node | null): Node | null {
+function copyRandomList (head: Node | null): Node | null {
   if (!head) return head
   const nodeMap = new WeakMap()
   const newVHead = new Node(null)
@@ -38,4 +38,3 @@ function copyRandomList(head: Node | null): Node | null {
   return newVHead.next
 };
 // @lc code=end
-

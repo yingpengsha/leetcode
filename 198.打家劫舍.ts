@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function rob(nums: number[]): number {
+function rob (nums: number[]): number {
   if (!nums.length) return 0
   const dp: number[] = []
   let max = dp[0] = nums[0]
@@ -22,4 +22,3 @@ function rob(nums: number[]): number {
   return max
 };
 // @lc code=end
-

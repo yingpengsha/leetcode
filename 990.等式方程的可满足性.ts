@@ -8,7 +8,7 @@
 class UnionMap {
   father = new Map<string, string>()
 
-  find(char: string) {
+  find (char: string) {
     if (!this.father.has(char)) {
       this.father.set(char, char)
     } else {
@@ -17,13 +17,13 @@ class UnionMap {
     return this.father.get(char)
   }
 
-  merge(a: string, b: string) {
+  merge (a: string, b: string) {
     if (a !== b) {
       this.father.set(this.find(a), this.find(b))
     }
   }
 }
-function equationsPossible(equations: string[]): boolean {
+function equationsPossible (equations: string[]): boolean {
   const union = new UnionMap()
   const notEqual: [string, string][] = []
   for (let i = 0; i < equations.length; i++) {
@@ -35,9 +35,8 @@ function equationsPossible(equations: string[]): boolean {
     }
   }
 
-  return notEqual.length 
+  return notEqual.length
     ? !notEqual.some(([a, b]) => union.find(a) === union.find(b))
     : true
 };
 // @lc code=end
-

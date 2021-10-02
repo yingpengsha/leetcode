@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function search(nums: number[], target: number): boolean {
+function search (nums: number[], target: number): boolean {
   let left = 0
   let right = nums.length - 1
   while (left <= right) {
@@ -16,7 +16,7 @@ function search(nums: number[], target: number): boolean {
 
     if (nums[left] === nums[right]) {
       left += 1
-      continue;
+      continue
     }
 
     if (nums[mid] < target) {
@@ -36,4 +36,3 @@ function search(nums: number[], target: number): boolean {
   return false
 };
 // @lc code=end
-

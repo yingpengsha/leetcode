@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function hIndex(citations: number[]): number {
+function hIndex (citations: number[]): number {
   const ordered = citations.sort((a, b) => b - a)
   let max = 0
   for (let i = 0; i < citations.length && citations[i] !== 0; i++) {
@@ -18,4 +18,3 @@ function hIndex(citations: number[]): number {
   return max
 };
 // @lc code=end
-

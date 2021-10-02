@@ -11,69 +11,68 @@ class MyCircularDeque {
     private count: number = 0
     private tail: number = 0
     private head: number = 0
-    constructor(k: number) {
-        this.size = k ?? 0
-        this.queue = new Array<number>(this.size)
+    constructor (k: number) {
+      this.size = k ?? 0
+      this.queue = new Array<number>(this.size)
     }
 
-    insertFront(value: number): boolean {
-        if (this.isFull()) return false
-        if (this.count !== 0) {
-            if (this.head === 0) { this.head = this.size - 1 }
-            else this.head -= 1
-        }
-        this.queue[this.head] = value
-        this.count += 1
-        return true
+    insertFront (value: number): boolean {
+      if (this.isFull()) return false
+      if (this.count !== 0) {
+        if (this.head === 0) { this.head = this.size - 1 } else this.head -= 1
+      }
+      this.queue[this.head] = value
+      this.count += 1
+      return true
     }
 
-    insertLast(value: number): boolean {
-        if (this.isFull()) return false
-        if (this.count !== 0) {
-            if (this.tail === this.size - 1) this.tail = 0
-            else this.tail += 1
-        }
-        this.queue[this.tail] = value
-        this.count += 1
-        return true
+    insertLast (value: number): boolean {
+      if (this.isFull()) return false
+      if (this.count !== 0) {
+        if (this.tail === this.size - 1) this.tail = 0
+        else this.tail += 1
+      }
+      this.queue[this.tail] = value
+      this.count += 1
+      return true
     }
 
-    deleteFront(): boolean {
-        if (this.isEmpty()) return false
-        if (this.count !== 1) {
-            if (this.head === this.size - 1) this.head = 0
-            else this.head += 1
-        }
-        this.count -= 1
-        return true
+    deleteFront (): boolean {
+      if (this.isEmpty()) return false
+      if (this.count !== 1) {
+        if (this.head === this.size - 1) this.head = 0
+        else this.head += 1
+      }
+      this.count -= 1
+      return true
     }
 
-    deleteLast(): boolean {
-        if (this.isEmpty()) return false
-        if (this.count !== 1) {
-            if (this.tail === 0) this.tail = this.size - 1
-            else this.tail -= 1
-        }
-        this.count -= 1
-        return true
+    deleteLast (): boolean {
+      if (this.isEmpty()) return false
+      if (this.count !== 1) {
+        if (this.tail === 0) this.tail = this.size - 1
+        else this.tail -= 1
+      }
+      this.count -= 1
+      return true
     }
 
-    getFront(): number {
-        if (this.isEmpty()) return -1
-        return this.queue[this.head]
+    getFront (): number {
+      if (this.isEmpty()) return -1
+      return this.queue[this.head]
     }
 
-    getRear(): number {
-        if (this.isEmpty()) return -1
-        return this.queue[this.tail]
+    getRear (): number {
+      if (this.isEmpty()) return -1
+      return this.queue[this.tail]
     }
 
-    isEmpty(): boolean {
-        return this.count === 0
+    isEmpty (): boolean {
+      return this.count === 0
     }
 
-    isFull(): boolean {
-        return this.count === this.size
+    isFull (): boolean {
+      return this.count === this.size
     }
 }
 
@@ -90,4 +89,3 @@ class MyCircularDeque {
  * var param_8 = obj.isFull()
  */
 // @lc code=end
-

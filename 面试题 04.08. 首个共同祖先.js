@@ -1,7 +1,7 @@
 
-function TreeNode(val) {
-    this.val = val;
-    this.left = this.right = null;
+function TreeNode (val) {
+  this.val = val
+  this.left = this.right = null
 }
 
 /**
@@ -10,24 +10,24 @@ function TreeNode(val) {
  * @param {TreeNode} q
  * @return {TreeNode}
  */
-var lowestCommonAncestor = function(root, p, q) {
-  let pFlag = 1
-  let qFlag = 1 << 1
-  let flags = pFlag | qFlag
+const lowestCommonAncestor = function (root, p, q) {
+  const pFlag = 1
+  const qFlag = 1 << 1
+  const flags = pFlag | qFlag
   let result
- 
+
   /**
    * @param {TreeNode} root
    * @return {TreeNode}
    */
-  function deepSearch(node) {
+  function deepSearch (node) {
     if (!node) return 0
     let state = 0
     state |= deepSearch(node.left)
     state |= deepSearch(node.right)
     if (node.val == p.val) {
       state |= pFlag
-    } else if(node.val == q.val) {
+    } else if (node.val == q.val) {
       state |= qFlag
     }
     if (state == flags && !result) {
@@ -37,4 +37,4 @@ var lowestCommonAncestor = function(root, p, q) {
   }
   deepSearch(root)
   return result
-};
+}

@@ -19,10 +19,9 @@
  * }
  */
 
-function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
+function isSameTree (p: TreeNode | null, q: TreeNode | null): boolean {
   if (!p && !q) return true
   if (!p || !p || p.val !== q.val) return false
   return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
 };
 // @lc code=end
-

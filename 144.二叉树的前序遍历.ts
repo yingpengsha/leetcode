@@ -19,7 +19,7 @@
  * }
  */
 
-function preorderTraversal(root: TreeNode | null): number[] {
+function preorderTraversal (root: TreeNode | null): number[] {
   if (!root) return []
   const result: number[] = []
   const stack: TreeNode[] = []
@@ -42,4 +42,3 @@ function preorderTraversal(root: TreeNode | null): number[] {
   return result
 };
 // @lc code=end
-

@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function relativeSortArray(arr1: number[], arr2: number[]): number[] {
+function relativeSortArray (arr1: number[], arr2: number[]): number[] {
   const counts: number[] = []
   for (let i = 0; i < arr1.length; i++) {
     counts[arr1[i]] = (counts[arr1[i]] || 0) + 1
@@ -21,4 +21,3 @@ function relativeSortArray(arr1: number[], arr2: number[]): number[] {
   return result
 };
 // @lc code=end
-

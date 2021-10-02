@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function numRabbits(answers: number[]): number {
+function numRabbits (answers: number[]): number {
   const countMap = new Map<number, number>()
   let sum = 0
   for (const value of answers) {
@@ -21,4 +21,3 @@ function numRabbits(answers: number[]): number {
   return sum
 };
 // @lc code=end
-

@@ -1,17 +1,17 @@
 class Heap<T = number> {
   public nodes: T[] = []
   public compare: (value1: T, value2: T) => boolean
-  constructor(initNodes: T[] = [], compare: (value1: T, value2: T) => boolean) {
+  constructor (initNodes: T[] = [], compare: (value1: T, value2: T) => boolean) {
     initNodes.forEach(node => this.add(node))
     this.compare = compare
   }
 
-  add(value: T) {
+  add (value: T) {
     this.nodes.push(value)
     this.shiftUp(this.size - 1)
   }
 
-  poll() {
+  poll () {
     if (!this.size) return undefined
     const peekValue = this.nodes.shift()
     if (this.size) {
@@ -21,7 +21,7 @@ class Heap<T = number> {
     return peekValue
   }
 
-  private shiftUp(index: number) {
+  private shiftUp (index: number) {
     let parentIndex = (index - 1) >> 1
     while (index && !this.compare(this.nodes[parentIndex], this.nodes[index])) {
       this.swap(parentIndex, index)
@@ -30,7 +30,7 @@ class Heap<T = number> {
     }
   }
 
-  private shiftDown(index: number) {
+  private shiftDown (index: number) {
     let left = index * 2 + 1
     let right = (index + 1) * 2
     while (left <= this.size - 1) {
@@ -53,19 +53,19 @@ class Heap<T = number> {
     return index
   }
 
-  private swap(index1: number, index2: number) {
+  private swap (index1: number, index2: number) {
     [this.nodes[index1], this.nodes[index2]] = [this.nodes[index2], this.nodes[index1]]
   }
 
-  get peek() {
+  get peek () {
     return this.nodes[0]
   }
 
-  get size() {
+  get size () {
     return this.nodes.length
   }
 }
-function getNumberOfBacklogOrders(orders: number[][]): number {
+function getNumberOfBacklogOrders (orders: number[][]): number {
   const buyHeap = new Heap<{ price: number, amount: number }>([], (v1, v2) => v1.price >= v2.price)
   const sellHeap = new Heap<{ price: number, amount: number }>([], (v1, v2) => v1.price <= v2.price)
   for (let [price, amount, orderType] of orders) {
@@ -100,7 +100,7 @@ function getNumberOfBacklogOrders(orders: number[][]): number {
   let result = 0
   while (buyHeap.peek) {
     result += buyHeap.poll().amount
-  }  
+  }
   while (sellHeap.peek) {
     result += sellHeap.poll().amount
   }

@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function findDuplicate(nums: number[]): number {
+function findDuplicate (nums: number[]): number {
   const visited = new Set<number>()
   for (let i = 0; i < nums.length; i++) {
     if (visited.has(nums[i])) {
@@ -15,4 +15,3 @@ function findDuplicate(nums: number[]): number {
   }
 };
 // @lc code=end
-

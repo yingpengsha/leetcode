@@ -7,21 +7,24 @@
 // @lc code=start
 class Stack<T> {
   private stack: Array<T> = []
-  push(value: T) {
+  push (value: T) {
     this.stack.push(value)
   }
-  pop() {
+
+  pop () {
     return this.stack.pop()
   }
-  get top() {
+
+  get top () {
     return this.stack[this.stack.length - 1]
   }
-  get length() {
+
+  get length () {
     return this.stack.length
   }
 }
 const Signs = new Set(['+', '-', '*', '/'])
-function parseString(s: string): { head: string, tail: string } {
+function parseString (s: string): { head: string, tail: string } {
   let start = 0
   while (s[start] === ' ') {
     start++
@@ -41,26 +44,26 @@ function parseString(s: string): { head: string, tail: string } {
     tail: s.substring(end)
   }
 }
-function compute(numberStack: Stack<number>, signStack: Stack<'*' | '/' | '+' | '-'>) {
+function compute (numberStack: Stack<number>, signStack: Stack<'*' | '/' | '+' | '-'>) {
   const rightValue = numberStack.pop()
   const signValue = signStack.pop()
   const leftValue = numberStack.pop()
   switch (signValue) {
     case '+':
       numberStack.push(leftValue + rightValue)
-      break;
+      break
     case '-':
       numberStack.push(leftValue - rightValue)
-      break;
-    case '*': 
+      break
+    case '*':
       numberStack.push(leftValue * rightValue)
-      break;
+      break
     case '/':
       numberStack.push(Math.floor(leftValue / rightValue))
       break
   }
 }
-function calculate(s: string): number {
+function calculate (s: string): number {
   const numberStack = new Stack<number>()
   const signStack = new Stack<'*' | '/' | '+' | '-'>()
   while (s.length) {
@@ -89,4 +92,3 @@ function calculate(s: string): number {
   return numberStack.pop()
 };
 // @lc code=end
-

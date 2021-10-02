@@ -5,12 +5,12 @@
  */
 
 // @lc code=start
-function intersect(nums1: number[], nums2: number[]): number[] {
+function intersect (nums1: number[], nums2: number[]): number[] {
   if (nums2.length > nums1.length) {
     return intersect(nums2, nums1)
   }
   const result = []
-  nums1.sort((a,b) => a-b)
+  nums1.sort((a, b) => a - b)
   for (let i = 0; i < nums2.length; i++) {
     if (search(nums1, nums2[i])) {
       result.push(nums2[i])
@@ -19,7 +19,7 @@ function intersect(nums1: number[], nums2: number[]): number[] {
   return result
 };
 
-function search(nums: number[], target: number) {
+function search (nums: number[], target: number) {
   let left = 0
   let right = nums.length - 1
   while (left <= right) {
@@ -37,4 +37,3 @@ function search(nums: number[], target: number) {
   return false
 }
 // @lc code=end
-

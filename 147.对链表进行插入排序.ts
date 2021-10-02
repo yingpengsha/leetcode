@@ -14,7 +14,7 @@
 //     }
 // }
 
-function insertionSortList(head: ListNode | null): ListNode | null {
+function insertionSortList (head: ListNode | null): ListNode | null {
   const VHead = new ListNode(null, head)
   let selectNode = VHead
   let index = 0
@@ -29,7 +29,7 @@ function insertionSortList(head: ListNode | null): ListNode | null {
         temp.next = compareNode.next
         compareNode.next = temp
         isInsert = true
-        break;
+        break
       }
       compareNode = compareNode.next
     }
@@ -41,4 +41,3 @@ function insertionSortList(head: ListNode | null): ListNode | null {
   return VHead.next
 };
 // @lc code=end
-

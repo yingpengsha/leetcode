@@ -5,10 +5,10 @@
  */
 
 // @lc code=start
-function maxSubArray(nums: number[]): number {
-  let sum = nums[0], max = nums[0]
+function maxSubArray (nums: number[]): number {
+  let sum = nums[0]; let max = nums[0]
   for (let i = 1; i < nums.length; i++) {
-    const temp  = sum + nums[i]
+    const temp = sum + nums[i]
     if (temp < nums[i]) {
       sum = nums[i]
     } else {
@@ -21,4 +21,3 @@ function maxSubArray(nums: number[]): number {
   return max
 };
 // @lc code=end
-

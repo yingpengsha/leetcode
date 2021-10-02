@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function findMaxConsecutiveOnes(nums: number[]): number {
+function findMaxConsecutiveOnes (nums: number[]): number {
   let start = 0
   let end = 0
   let max = 0
@@ -21,4 +21,3 @@ function findMaxConsecutiveOnes(nums: number[]): number {
   return max
 };
 // @lc code=end
-

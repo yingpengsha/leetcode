@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function search(nums: number[], target: number): number {
+function search (nums: number[], target: number): number {
   let left = 0
   let right = nums.length - 1
   if (target > nums[right] || target < nums[left]) return -1
@@ -23,4 +23,3 @@ function search(nums: number[], target: number): number {
   return center
 };
 // @lc code=end
-

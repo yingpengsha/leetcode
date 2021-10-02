@@ -19,7 +19,7 @@
  * }
  */
 
-function deepestLeavesSum(root: TreeNode | null): number {
+function deepestLeavesSum (root: TreeNode | null): number {
   let currentDeep = [root]
   while (currentDeep.length) {
     const nextDeep = []
@@ -46,4 +46,3 @@ function deepestLeavesSum(root: TreeNode | null): number {
   return sum
 };
 // @lc code=end
-

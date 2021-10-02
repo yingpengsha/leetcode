@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function lengthOfLIS(nums: number[]): number {
+function lengthOfLIS (nums: number[]): number {
   const dp: number[] = Array(nums.length)
   let max = dp[0] = 1
   for (let i = 1; i < nums.length; i++) {
@@ -22,4 +22,3 @@ function lengthOfLIS(nums: number[]): number {
   return max
 };
 // @lc code=end
-

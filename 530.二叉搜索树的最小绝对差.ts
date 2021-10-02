@@ -19,7 +19,7 @@
  * }
  */
 
-function getMinimumDifference(root: TreeNode | null): number {
+function getMinimumDifference (root: TreeNode | null): number {
   const preorder: number[] = []
   const stack = [root]
   while (stack.length) {
@@ -35,7 +35,7 @@ function getMinimumDifference(root: TreeNode | null): number {
       stack.push(current.right)
     }
   }
-  
+
   let min = Infinity
   for (let i = 1; i < preorder.length; i++) {
     const diff = preorder[i] - preorder[i - 1]
@@ -46,4 +46,3 @@ function getMinimumDifference(root: TreeNode | null): number {
   return min
 };
 // @lc code=end
-

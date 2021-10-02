@@ -5,32 +5,31 @@
  */
 
 // @lc code=start
-function evalRPN(tokens: string[]): number {
+function evalRPN (tokens: string[]): number {
   const stack: number[] = []
   for (let i = 0; i < tokens.length; i++) {
-    const token = tokens[i];
+    const token = tokens[i]
     let rightValue
     switch (token) {
       case '+':
         stack.push(stack.pop() + stack.pop())
-        break;
+        break
       case '-':
         rightValue = stack.pop()
         stack.push(stack.pop() - rightValue)
-        break;
+        break
       case '*':
         stack.push(stack.pop() * stack.pop())
-        break;
+        break
       case '/':
         rightValue = stack.pop()
         stack.push(~~(stack.pop() / rightValue))
-        break;
+        break
       default:
         stack.push(+token)
-        break;
+        break
     }
   }
   return stack.pop()
 };
 // @lc code=end
-

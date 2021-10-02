@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-function removeOuterParentheses(S: string): string {
+function removeOuterParentheses (S: string): string {
   const stack: string[] = []
   let result = ''
   for (let i = 0; i < S.length; i++) {
-    const char = S[i];
+    const char = S[i]
     if (char === '(') {
       stack.push(char)
       if (stack.length !== 1) {
@@ -26,4 +26,3 @@ function removeOuterParentheses(S: string): string {
   return result
 };
 // @lc code=end
-

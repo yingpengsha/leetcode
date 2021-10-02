@@ -8,20 +8,20 @@
 class MyQueue {
     private queue: number[] = []
 
-    push(x: number): void {
-        this.queue.push(x)
+    push (x: number): void {
+      this.queue.push(x)
     }
 
-    pop(): number {
-        return this.queue.shift()
+    pop (): number {
+      return this.queue.shift()
     }
 
-    peek(): number {
-        return this.queue[0]
+    peek (): number {
+      return this.queue[0]
     }
 
-    empty(): boolean {
-        return !this.queue.length
+    empty (): boolean {
+      return !this.queue.length
     }
 }
 
@@ -34,4 +34,3 @@ class MyQueue {
  * var param_4 = obj.empty()
  */
 // @lc code=end
-

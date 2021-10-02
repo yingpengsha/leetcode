@@ -8,37 +8,37 @@
 class Trie {
     private trie: {[p: string]: Trie['trie'] | boolean} = {}
 
-    insert(word: string): void {
-        let currentTree = this.trie
-        for (const char of word) {
-            if (!currentTree[char]) {
-                currentTree[char] = {}
-            }
-            currentTree = currentTree[char] as Trie['trie']
+    insert (word: string): void {
+      let currentTree = this.trie
+      for (const char of word) {
+        if (!currentTree[char]) {
+          currentTree[char] = {}
         }
-        currentTree.isEnd = true
+        currentTree = currentTree[char] as Trie['trie']
+      }
+      currentTree.isEnd = true
     }
 
-    search(word: string): boolean {
-        let currentTree = this.trie
-        for (const char of word) {
-            if (!currentTree[char]) {
-                return false
-            }
-            currentTree = currentTree[char] as Trie['trie']
+    search (word: string): boolean {
+      let currentTree = this.trie
+      for (const char of word) {
+        if (!currentTree[char]) {
+          return false
         }
-        return !!currentTree.isEnd
+        currentTree = currentTree[char] as Trie['trie']
+      }
+      return !!currentTree.isEnd
     }
 
-    startsWith(prefix: string): boolean {
-        let currentTree = this.trie
-        for (const char of prefix) {
-            if (!currentTree[char]) {
-                return false
-            }
-            currentTree = currentTree[char] as Trie['trie']
+    startsWith (prefix: string): boolean {
+      let currentTree = this.trie
+      for (const char of prefix) {
+        if (!currentTree[char]) {
+          return false
         }
-        return true
+        currentTree = currentTree[char] as Trie['trie']
+      }
+      return true
     }
 }
 
@@ -50,4 +50,3 @@ class Trie {
  * var param_3 = obj.startsWith(prefix)
  */
 // @lc code=end
-

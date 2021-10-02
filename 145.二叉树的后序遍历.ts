@@ -16,7 +16,7 @@
 //     }
 // }
 
-function postorderTraversal(root: TreeNode | null): number[] {
+function postorderTraversal (root: TreeNode | null): number[] {
   if (!root) return []
   const result: number[] = []
   const stack: TreeNode[] = []
@@ -40,4 +40,3 @@ function postorderTraversal(root: TreeNode | null): number[] {
   return result
 };
 // @lc code=end
-

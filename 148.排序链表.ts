@@ -16,14 +16,14 @@
  *     }
  * }
  */
-function mergeList(head: ListNode | null, count: number): ListNode {
+function mergeList (head: ListNode | null, count: number): ListNode {
   if (!head || !count || count === 1) return head
   const n = count >> 1
   let left = head
-  for (let i = 1; i < n; i++) head = head.next;
+  for (let i = 1; i < n; i++) head = head.next
   let right = head.next
   head.next = null
-  left = mergeList(left, n) 
+  left = mergeList(left, n)
   right = mergeList(right, count - n)
 
   const newHead = new ListNode()
@@ -44,7 +44,7 @@ function mergeList(head: ListNode | null, count: number): ListNode {
   }
   return newHead.next
 }
-function sortList(head: ListNode | null): ListNode | null {
+function sortList (head: ListNode | null): ListNode | null {
   let count = 0
   let fakeHead = head
   while (fakeHead) {
@@ -54,4 +54,3 @@ function sortList(head: ListNode | null): ListNode | null {
   return mergeList(head, count)
 };
 // @lc code=end
-

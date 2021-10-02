@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function nthSuperUglyNumber(n: number, primes: number[]): number {
+function nthSuperUglyNumber (n: number, primes: number[]): number {
   if (n === 1) return 1
   const result = [1]
   const baseIndex = Array(primes.length).fill(0)
@@ -23,4 +23,3 @@ function nthSuperUglyNumber(n: number, primes: number[]): number {
   return result.pop()
 };
 // @lc code=end
-

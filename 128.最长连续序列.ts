@@ -8,7 +8,7 @@
 class UnionMap {
   father = new Map<number, number>()
 
-  find(index: number): number {
+  find (index: number): number {
     if (this.father.has(index)) {
       const father = this.father.get(index)
       this.father.set(index, father === index ? index : this.find(father))
@@ -18,11 +18,11 @@ class UnionMap {
     return this.father.get(index)
   }
 
-  add(index: number) {
+  add (index: number) {
     this.father.set(this.find(index), this.find(index - 1))
   }
 }
-function longestConsecutive(nums: number[]): number {
+function longestConsecutive (nums: number[]): number {
   if (!nums.length) return 0
   const union = new UnionMap()
   for (const value of nums) {
@@ -35,4 +35,3 @@ function longestConsecutive(nums: number[]): number {
   return max
 };
 // @lc code=end
-

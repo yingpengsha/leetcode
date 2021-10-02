@@ -8,20 +8,20 @@
 class MyStack {
     private stack: number[] = []
 
-    push(x: number): void {
-        this.stack.push(x)
+    push (x: number): void {
+      this.stack.push(x)
     }
 
-    pop(): number {
-        return this.stack.pop()
+    pop (): number {
+      return this.stack.pop()
     }
 
-    top(): number {
-        return this.stack[this.stack.length - 1]
+    top (): number {
+      return this.stack[this.stack.length - 1]
     }
 
-    empty(): boolean {
-        return !this.stack.length
+    empty (): boolean {
+      return !this.stack.length
     }
 }
 
@@ -34,4 +34,3 @@ class MyStack {
  * var param_4 = obj.empty()
  */
 // @lc code=end
-

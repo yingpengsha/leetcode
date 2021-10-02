@@ -6,7 +6,7 @@
 
 // @lc code=start
 const SymbolList = new Set(['(', ')', '+', '-'])
-function getHeadAndTail(s: string) {
+function getHeadAndTail (s: string) {
   let start = 0
   while (s[start] !== ' ') start++
   if (SymbolList.has[start]) {
@@ -23,7 +23,7 @@ function getHeadAndTail(s: string) {
     }
   }
 }
-function calculate(s: string): number {
+function calculate (s: string): number {
   const signs = [1]
   let currentSign = 1
   let sum = 0
@@ -48,4 +48,3 @@ function calculate(s: string): number {
   return sum
 };
 // @lc code=end
-

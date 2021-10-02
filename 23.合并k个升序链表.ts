@@ -16,17 +16,17 @@
 class Heap<T = number> {
   public nodes: T[] = []
   public compare: (value1: T, value2: T) => boolean
-  constructor(initNodes: T[] = [], compare: (value1: T, value2: T) => boolean) {
+  constructor (initNodes: T[] = [], compare: (value1: T, value2: T) => boolean) {
     initNodes.forEach(node => this.add(node))
     this.compare = compare
   }
 
-  add(value: T) {
+  add (value: T) {
     this.nodes.push(value)
     this.shiftUp(this.size - 1)
   }
 
-  poll() {
+  poll () {
     if (!this.size) return undefined
     const peekValue = this.nodes.shift()
     if (this.size) {
@@ -36,7 +36,7 @@ class Heap<T = number> {
     return peekValue
   }
 
-  private shiftUp(index: number) {
+  private shiftUp (index: number) {
     let parentIndex = (index - 1) >> 1
     while (index && !this.compare(this.nodes[parentIndex], this.nodes[index])) {
       this.swap(parentIndex, index)
@@ -45,7 +45,7 @@ class Heap<T = number> {
     }
   }
 
-  private shiftDown(index: number) {
+  private shiftDown (index: number) {
     let left = index * 2 + 1
     let right = (index + 1) * 2
     while (left <= this.size - 1) {
@@ -68,20 +68,20 @@ class Heap<T = number> {
     return index
   }
 
-  private swap(index1: number, index2: number) {
+  private swap (index1: number, index2: number) {
     [this.nodes[index1], this.nodes[index2]] = [this.nodes[index2], this.nodes[index1]]
   }
 
-  get peek() {
+  get peek () {
     return this.nodes[0]
   }
 
-  get size() {
+  get size () {
     return this.nodes.length
   }
 }
 
-function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
+function mergeKLists (lists: Array<ListNode | null>): ListNode | null {
   if (lists.length === 1) return lists[0]
   const minHeap = new Heap<ListNode>([], (node1, node2) => node1.val <= node2.val)
   for (let head of lists) {
@@ -99,4 +99,3 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
   return newHead.next
 };
 // @lc code=end
-

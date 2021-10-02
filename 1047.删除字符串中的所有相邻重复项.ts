@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-function removeDuplicates(S: string): string {
+function removeDuplicates (S: string): string {
   if (!S || S.length === 1) return S
   const result = S.split('')
   for (let i = 1; i < result.length; i++) {
-    const char = result[i];
+    const char = result[i]
     if (char === result[i - 1]) {
       result.splice(i - 1, 2)
       i -= 2
@@ -18,4 +18,3 @@ function removeDuplicates(S: string): string {
   return result.join('')
 };
 // @lc code=end
-

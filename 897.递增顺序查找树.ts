@@ -19,7 +19,7 @@
  * }
  */
 
-function increasingBST(root: TreeNode | null): TreeNode | null {
+function increasingBST (root: TreeNode | null): TreeNode | null {
   if (!root) return null
   const result = new TreeNode(null)
   let resultRoot = result
@@ -40,4 +40,3 @@ function increasingBST(root: TreeNode | null): TreeNode | null {
   return result.right
 };
 // @lc code=end
-

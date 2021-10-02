@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function search(nums: number[], target: number): number {
+function search (nums: number[], target: number): number {
   let left = 0
   let right = nums.length - 1
   let mid: number
@@ -32,4 +32,3 @@ function search(nums: number[], target: number): number {
   }
 };
 // @lc code=end
-

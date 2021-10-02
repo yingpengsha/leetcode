@@ -13,8 +13,8 @@
  */
 
 // 中序遍历
-function kthLargest(root: TreeNode | null, k: number): number {
-  const stack: TreeNode []= [root]
+function kthLargest (root: TreeNode | null, k: number): number {
+  const stack: TreeNode [] = [root]
   const values: number[] = []
   while (stack.length) {
     while (stack[stack.length - 1].right) {

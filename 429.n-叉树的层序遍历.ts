@@ -14,7 +14,7 @@
 //     }
 // }
 
-function levelOrder(root: Node | null): number[][] {
+function levelOrder (root: Node | null): number[][] {
   if (!root) return []
   const result: number[][] = []
   let currentDeep = [root]
@@ -29,4 +29,3 @@ function levelOrder(root: Node | null): number[][] {
   return result
 };
 // @lc code=end
-

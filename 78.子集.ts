@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function subsets(nums: number[]): number[][] {
+function subsets (nums: number[]): number[][] {
   const result: number[][] = [[]]
   for (let i = 0; i < nums.length; i++) {
     const length = result.length
@@ -18,4 +18,3 @@ function subsets(nums: number[]): number[][] {
   return result
 };
 // @lc code=end
-

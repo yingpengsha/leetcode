@@ -5,22 +5,22 @@
  */
 
 // @lc code=start
-function calPoints(ops: string[]): number {
+function calPoints (ops: string[]): number {
   const stack: number[] = []
   for (let i = 0; i < ops.length; i++) {
     switch (ops[i]) {
       case 'C':
         stack.pop()
-        break;
+        break
       case 'D':
         stack.push(stack[stack.length - 1] * 2)
-        break;
+        break
       case '+':
         stack.push(stack[stack.length - 1] + stack[stack.length - 2])
-        break;
+        break
       default:
         stack.push(+ops[i])
-        break;
+        break
     }
   }
   let sum = 0
@@ -28,4 +28,3 @@ function calPoints(ops: string[]): number {
   return sum
 };
 // @lc code=end
-

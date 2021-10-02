@@ -1,5 +1,5 @@
 // TODO: 负数，小数排序
-export default function radixSort(arr: number[]): number[] {
+export default function radixSort (arr: number[]): number[] {
   const counts = []
   const temp = []
   let lastCount = 0

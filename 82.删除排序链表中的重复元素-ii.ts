@@ -14,9 +14,9 @@
 //     }
 // }
 
-function deleteDuplicates(head: ListNode | null): ListNode | null {
+function deleteDuplicates (head: ListNode | null): ListNode | null {
   if (!head || !head.next) return head
-  let left = new ListNode(null), center = head, right = head.next
+  let left = new ListNode(null); let center = head; let right = head.next
   const newHead = left
   let current = newHead
   while (center) {
@@ -31,4 +31,3 @@ function deleteDuplicates(head: ListNode | null): ListNode | null {
   return newHead.next
 };
 // @lc code=end
-

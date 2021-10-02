@@ -1,4 +1,4 @@
-export default function quickSort(arr: number[], left: number = 0, right: number = arr.length - 1) {
+export default function quickSort (arr: number[], left: number = 0, right: number = arr.length - 1) {
   if (left >= right) return arr
   let x = left
   let y = right

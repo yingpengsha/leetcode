@@ -21,7 +21,7 @@
  * }
  */
 
-function connect(root: Node | null): Node | null {
+function connect (root: Node | null): Node | null {
   if (!root) return root
   let currentDeep = [root]
   while (currentDeep.length) {
@@ -36,4 +36,3 @@ function connect(root: Node | null): Node | null {
   return root
 };
 // @lc code=end
-

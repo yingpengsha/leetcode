@@ -19,7 +19,7 @@
  * }
  */
 
-function levelOrderBottom(root: TreeNode | null): number[][] {
+function levelOrderBottom (root: TreeNode | null): number[][] {
   if (!root) return []
   let currentDeep = [root]
   const result: number[][] = []
@@ -41,4 +41,3 @@ function levelOrderBottom(root: TreeNode | null): number[][] {
   return result
 };
 // @lc code=end
-

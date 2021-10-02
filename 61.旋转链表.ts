@@ -14,7 +14,7 @@
 //     }
 // }
 
-function getListLength(head: ListNode): number {
+function getListLength (head: ListNode): number {
   let count = 1
   while (head.next) {
     count++
@@ -23,7 +23,7 @@ function getListLength(head: ListNode): number {
   return count
 }
 
-function getNewHead(head: ListNode, index: number) {
+function getNewHead (head: ListNode, index: number) {
   while (index > 1) {
     index--
     head = head.next
@@ -33,7 +33,7 @@ function getNewHead(head: ListNode, index: number) {
   return newHead
 }
 
-function rotateRight(head: ListNode | null, k: number): ListNode | null {
+function rotateRight (head: ListNode | null, k: number): ListNode | null {
   if (!head || !head.next || !k) return head
   const length = getListLength(head)
 
@@ -41,7 +41,7 @@ function rotateRight(head: ListNode | null, k: number): ListNode | null {
   if (!k) return head
 
   const newHead = getNewHead(head, length - k)
-  
+
   let oldTail = newHead
   while (oldTail.next) {
     oldTail = oldTail.next
@@ -51,4 +51,3 @@ function rotateRight(head: ListNode | null, k: number): ListNode | null {
   return newHead
 };
 // @lc code=end
-

@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function removeCoveredIntervals(intervals: number[][]): number {
+function removeCoveredIntervals (intervals: number[][]): number {
   intervals = intervals.sort((a, b) => (a[0] - b[0]) || (b[1] - a[1]))
   let count = 0
   for (let i = 0; i < intervals.length; i++) {
@@ -20,4 +20,3 @@ function removeCoveredIntervals(intervals: number[][]): number {
   return count
 };
 // @lc code=end
-

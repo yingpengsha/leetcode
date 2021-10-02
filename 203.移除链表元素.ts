@@ -14,7 +14,7 @@
 //   }
 // }
 
-function removeElements(head: ListNode | null, val: number): ListNode | null {
+function removeElements (head: ListNode | null, val: number): ListNode | null {
   const VNode = new ListNode(null)
   let current = VNode
   while (head) {
@@ -26,4 +26,3 @@ function removeElements(head: ListNode | null, val: number): ListNode | null {
   return VNode.next
 };
 // @lc code=end
-

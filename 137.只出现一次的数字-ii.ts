@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function singleNumber(nums: number[]): number {
+function singleNumber (nums: number[]): number {
   let pre = 0
   let cache = 0
   for (const num of nums) {
@@ -15,4 +15,3 @@ function singleNumber(nums: number[]): number {
   return pre
 };
 // @lc code=end
-

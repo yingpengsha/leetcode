@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function maximumGap(nums: number[]): number {
+function maximumGap (nums: number[]): number {
   if (nums.length < 2) return 0
   const counts = []
   const temp = []
@@ -29,7 +29,7 @@ function maximumGap(nums: number[]): number {
   for (let i = nums.length - 1; i >= 0; --i) {
     nums[--counts[(temp[i] & 0xffff0000) >> 16]] = temp[i]
   }
-  
+
   let max = 0
   for (let i = 1; i < nums.length; i++) {
     max = Math.max(max, nums[i] - nums[i - 1])
@@ -37,4 +37,3 @@ function maximumGap(nums: number[]): number {
   return max
 };
 // @lc code=end
-

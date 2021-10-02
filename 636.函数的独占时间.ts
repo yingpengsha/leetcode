@@ -5,11 +5,11 @@
  */
 
 // @lc code=start
-function exclusiveTime(n: number, logs: string[]): number[] {
+function exclusiveTime (n: number, logs: string[]): number[] {
   const runtimeMap: { [id: string]: { count: number, start: number } } = {}
   const callStack: string[] = []
   for (let i = 0; i < logs.length; i++) {
-    const [id, startOrEnd, tick] = logs[i].split(':');
+    const [id, startOrEnd, tick] = logs[i].split(':')
     if (startOrEnd === 'start') {
       if (callStack.length) {
         runtimeMap[callStack[callStack.length - 1]].count += +tick - runtimeMap[callStack[callStack.length - 1]].start
@@ -31,4 +31,3 @@ function exclusiveTime(n: number, logs: string[]): number[] {
   return Object.values(runtimeMap).map(o => o.count)
 };
 // @lc code=end
-

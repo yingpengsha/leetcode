@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function floodFill(image: number[][], sr: number, sc: number, newColor: number): number[][] {
+function floodFill (image: number[][], sr: number, sc: number, newColor: number): number[][] {
   if (image[sr][sc] === newColor) return image
   const stack: number[][] = [[sr, sc]]
   const oldColor = image[sr][sc]
@@ -22,4 +22,3 @@ function floodFill(image: number[][], sr: number, sc: number, newColor: number):
   return image
 };
 // @lc code=end
-

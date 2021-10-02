@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function isPerfectSquare(num: number): boolean {
+function isPerfectSquare (num: number): boolean {
   let left = 1
   let right = Math.ceil(num / 2)
   while (left <= right) {
@@ -23,4 +23,3 @@ function isPerfectSquare(num: number): boolean {
   return false
 };
 // @lc code=end
-

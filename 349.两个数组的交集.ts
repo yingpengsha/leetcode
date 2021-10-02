@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function intersection(nums1: number[], nums2: number[]): number[] {
+function intersection (nums1: number[], nums2: number[]): number[] {
   if (nums1.length < nums2.length) {
     return intersection(nums2, nums1)
   }
@@ -20,4 +20,3 @@ function intersection(nums1: number[], nums2: number[]): number[] {
   return result
 };
 // @lc code=end
-

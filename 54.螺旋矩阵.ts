@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function spiralOrder(matrix: number[][]): number[] {
+function spiralOrder (matrix: number[][]): number[] {
   const result: number[] = []
   let topSide = matrix[0].length
   let rightSide = matrix.length - 1
@@ -29,4 +29,3 @@ function spiralOrder(matrix: number[][]): number[] {
   return result
 };
 // @lc code=end
-

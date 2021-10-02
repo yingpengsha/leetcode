@@ -7,16 +7,16 @@
 // @lc code=start
 class Heap {
   private nodes: number[] = []
-  constructor(initNodes: number[] = []) {
+  constructor (initNodes: number[] = []) {
     initNodes.forEach(node => this.add(node))
   }
 
-  add(value: number) {
+  add (value: number) {
     this.nodes.push(value)
     this.shiftUp(this.size - 1)
   }
 
-  poll() {
+  poll () {
     if (!this.size) return undefined
     const peekValue = this.nodes.shift()
     if (this.size) {
@@ -26,7 +26,7 @@ class Heap {
     return peekValue
   }
 
-  private shiftUp(index: number) {
+  private shiftUp (index: number) {
     let parentIndex = (index - 1) >> 1
     while (index && this.nodes[parentIndex] < this.nodes[index]) {
       this.swap(parentIndex, index)
@@ -35,7 +35,7 @@ class Heap {
     }
   }
 
-  private shiftDown(index: number) {
+  private shiftDown (index: number) {
     let left = index * 2 + 1
     let right = (index + 1) * 2
     while (left <= this.size - 1) {
@@ -58,19 +58,19 @@ class Heap {
     return index
   }
 
-  private swap(index1: number, index2: number) {
+  private swap (index1: number, index2: number) {
     [this.nodes[index1], this.nodes[index2]] = [this.nodes[index2], this.nodes[index1]]
   }
 
-  get peek() {
+  get peek () {
     return this.nodes[0]
   }
 
-  get size() {
+  get size () {
     return this.nodes.length
   }
 }
-function findKthLargest(nums: number[], k: number): number {
+function findKthLargest (nums: number[], k: number): number {
   const numberHeep = new Heap(nums)
   while (--k) {
     numberHeep.poll()
@@ -78,4 +78,3 @@ function findKthLargest(nums: number[], k: number): number {
   return numberHeep.peek
 };
 // @lc code=end
-

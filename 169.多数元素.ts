@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function majorityElement(nums: number[]): number {
+function majorityElement (nums: number[]): number {
   nums.sort()
   if (nums.length % 2 === 0) {
     return nums[(nums.length >> 1) - 1]
@@ -14,4 +14,3 @@ function majorityElement(nums: number[]): number {
   }
 };
 // @lc code=end
-

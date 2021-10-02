@@ -14,7 +14,7 @@
 //   }
 // }
 
-function partition(head: ListNode | null, x: number): ListNode | null {
+function partition (head: ListNode | null, x: number): ListNode | null {
   const VHead = new ListNode(null, head)
   let lastMinNode = VHead
   let current = VHead
@@ -35,4 +35,3 @@ function partition(head: ListNode | null, x: number): ListNode | null {
   return VHead.next
 };
 // @lc code=end
-

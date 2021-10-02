@@ -1,15 +1,15 @@
- /*
+/*
  * @lc app=leetcode.cn id=684 lang=typescript
  *
  * [684] 冗余连接
  */
 
 // @lc code=start
-function findRedundantConnection(edges: number[][]): number[] {
+function findRedundantConnection (edges: number[][]): number[] {
   class UnionMap {
     father = new Map<number, number>()
-    
-    find(index: number): number {
+
+    find (index: number): number {
       if (this.father.has(index)) {
         this.father.set(index, this.father.get(index) === index ? index : this.find(this.father.get(index)))
       } else {
@@ -18,7 +18,7 @@ function findRedundantConnection(edges: number[][]): number[] {
       return this.father.get(index)
     }
 
-    merge(a: number, b: number) {
+    merge (a: number, b: number) {
       this.father.set(this.find(a), this.find(b))
     }
   }
@@ -34,4 +34,3 @@ function findRedundantConnection(edges: number[][]): number[] {
   return result.pop()
 };
 // @lc code=end
-

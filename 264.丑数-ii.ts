@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function nthUglyNumber(n: number): number {
+function nthUglyNumber (n: number): number {
   const result = [1]
   const resultSet = new Set<number>()
   let index2 = 0

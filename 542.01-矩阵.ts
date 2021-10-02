@@ -9,31 +9,31 @@ class Stack {
   public value = new Array<number[]>()
   public visited = new Set<string>()
 
-  constructor() {
+  constructor () {
     this.value = []
     this.visited = new Set<string>()
   }
 
-  push(value: number[]) {
+  push (value: number[]) {
     const sign = value.join(',')
     if (this.visited.has(sign)) return
     this.visited.add(sign)
     return this.value.push(value)
   }
 
-  pop() {
+  pop () {
     return this.value.pop()
   }
 
-  clear() {
+  clear () {
     return this.value.splice(0)
   }
 
-  get length() {
+  get length () {
     return this.value.length
   }
 }
-function BFS(matrix: number[][], x: number, y: number): number[][] {
+function BFS (matrix: number[][], x: number, y: number): number[][] {
   const returnStack: number[][] = []
   if (y > 0 && matrix[y - 1][x]) returnStack.push([y - 1, x])
   if (x < matrix[0].length - 1 && matrix[y][x + 1]) returnStack.push([y, x + 1])
@@ -41,7 +41,7 @@ function BFS(matrix: number[][], x: number, y: number): number[][] {
   if (x > 0 && matrix[y][x - 1]) returnStack.push([y, x - 1])
   return returnStack
 }
-function updateMatrix(matrix: number[][]): number[][] {
+function updateMatrix (matrix: number[][]): number[][] {
   const stack = new Stack()
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[0].length; j++) {
@@ -60,6 +60,5 @@ function updateMatrix(matrix: number[][]): number[][] {
   }
   return matrix
 };
-updateMatrix([[1],[1],[1],[1],[1],[0]])
+updateMatrix([[1], [1], [1], [1], [1], [0]])
 // @lc code=end
-

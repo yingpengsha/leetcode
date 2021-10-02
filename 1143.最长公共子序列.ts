@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function longestCommonSubsequence(text1: string, text2: string): number {
+function longestCommonSubsequence (text1: string, text2: string): number {
   if (text1 === text2) return text1.length
   const dp: number[][] = new Array(text1.length + 1)
   let max = 0
@@ -27,4 +27,3 @@ function longestCommonSubsequence(text1: string, text2: string): number {
   return max
 };
 // @lc code=end
-

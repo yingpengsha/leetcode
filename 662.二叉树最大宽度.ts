@@ -22,7 +22,7 @@ interface OrderNode {
   order: bigint
   node: TreeNode
 }
-function widthOfBinaryTree(root: TreeNode | null): bigint {
+function widthOfBinaryTree (root: TreeNode | null): bigint {
   if (!root) return 0n
   let currentDeep: OrderNode[] = [{ order: 1n, node: root }]
   let max = 1n
@@ -43,4 +43,3 @@ function widthOfBinaryTree(root: TreeNode | null): bigint {
   return max
 };
 // @lc code=end
-

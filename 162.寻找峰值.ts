@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function findPeakElement(nums: number[]): number {
+function findPeakElement (nums: number[]): number {
   let left = 0
   let right = nums.length - 1
   let mid: number
@@ -20,4 +20,3 @@ function findPeakElement(nums: number[]): number {
   return left
 };
 // @lc code=end
-

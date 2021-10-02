@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function canVisitAllRooms(rooms: number[][]): boolean {
+function canVisitAllRooms (rooms: number[][]): boolean {
   const visitedRooms = [0]
   const queue = [0]
   while (queue.length) {
@@ -20,4 +20,3 @@ function canVisitAllRooms(rooms: number[][]): boolean {
   return rooms.length === visitedRooms.length
 };
 // @lc code=end
-

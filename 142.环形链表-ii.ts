@@ -17,7 +17,7 @@
  * }
  */
 
-function detectCycle(head: ListNode | null): ListNode | null {
+function detectCycle (head: ListNode | null): ListNode | null {
   const nodeCollection = new WeakSet()
   while (head) {
     if (nodeCollection.has(head)) {
@@ -30,4 +30,3 @@ function detectCycle(head: ListNode | null): ListNode | null {
   return null
 };
 // @lc code=end
-

@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function increasingTriplet(nums: number[]): boolean {
+function increasingTriplet (nums: number[]): boolean {
   if (nums.length < 3) return false
   let small = nums[0]
   let mid: number
@@ -21,4 +21,3 @@ function increasingTriplet(nums: number[]): boolean {
   return false
 };
 // @lc code=end
-

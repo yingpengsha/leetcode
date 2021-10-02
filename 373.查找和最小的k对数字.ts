@@ -5,23 +5,23 @@
  */
 
 // @lc code=start
-function kSmallestPairs(nums1: number[], nums2: number[], k: number): number[][] {
+function kSmallestPairs (nums1: number[], nums2: number[], k: number): number[][] {
   if (!k) return []
   class Heap<T = number> {
     public nodes: T[] = []
-    constructor(initNodes: T[] = [], compare?: (value1: T, value2: T) => boolean) {
+    constructor (initNodes: T[] = [], compare?: (value1: T, value2: T) => boolean) {
       initNodes.forEach(node => this.add(node))
       if (compare) {
         this.isRightOrder = compare
       }
     }
-  
-    add(value: T) {
+
+    add (value: T) {
       this.nodes.push(value)
       this.shiftUp(this.size - 1)
     }
-  
-    poll() {
+
+    poll () {
       if (!this.size) return undefined
       const peekValue = this.nodes.shift()
       if (this.size) {
@@ -30,8 +30,8 @@ function kSmallestPairs(nums1: number[], nums2: number[], k: number): number[][]
       }
       return peekValue
     }
-  
-    private shiftUp(index: number) {
+
+    private shiftUp (index: number) {
       let parentIndex = (index - 1) >> 1
       while (index && !this.isRightOrder(this.nodes[parentIndex], this.nodes[index])) {
         this.swap(parentIndex, index)
@@ -39,8 +39,8 @@ function kSmallestPairs(nums1: number[], nums2: number[], k: number): number[][]
         parentIndex = (index - 1) >> 1
       }
     }
-  
-    private shiftDown(index: number) {
+
+    private shiftDown (index: number) {
       let left = index * 2 + 1
       let right = (index + 1) * 2
       while (left <= this.size - 1) {
@@ -62,20 +62,20 @@ function kSmallestPairs(nums1: number[], nums2: number[], k: number): number[][]
       }
       return index
     }
-  
-    private swap(index1: number, index2: number) {
+
+    private swap (index1: number, index2: number) {
       [this.nodes[index1], this.nodes[index2]] = [this.nodes[index2], this.nodes[index1]]
     }
-  
-    get peek() {
+
+    get peek () {
       return this.nodes[0]
     }
-  
-    get size() {
+
+    get size () {
       return this.nodes.length
     }
-  
-    isRightOrder(value1: T, value2: T) {
+
+    isRightOrder (value1: T, value2: T) {
       if (typeof value1 === 'number') {
         return value1 >= value2
       }
@@ -85,7 +85,7 @@ function kSmallestPairs(nums1: number[], nums2: number[], k: number): number[][]
   const biggestHeap = new Heap<[number, number]>([], compare)
   for (const value1 of nums1) {
     for (const value2 of nums2) {
-      if (biggestHeap.size > k  && compare([value1, value2], biggestHeap.peek)) {
+      if (biggestHeap.size > k && compare([value1, value2], biggestHeap.peek)) {
         break
       }
       biggestHeap.add([value1, value2])
@@ -97,4 +97,3 @@ function kSmallestPairs(nums1: number[], nums2: number[], k: number): number[][]
   return biggestHeap.nodes
 };
 // @lc code=end
-

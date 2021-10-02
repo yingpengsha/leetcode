@@ -5,9 +5,9 @@
  */
 
 // @lc code=start
-function findDiagonalOrder(matrix: number[][]): number[] {
+function findDiagonalOrder (matrix: number[][]): number[] {
   if (!matrix.length || !matrix[0].length) return []
-  let result = []
+  const result = []
   const xMax = matrix[0].length - 1
   const yMax = matrix.length - 1
   for (let i = 0; i < matrix[0].length + matrix.length - 1; i++) {
@@ -32,4 +32,3 @@ function findDiagonalOrder(matrix: number[][]): number[] {
   return result
 };
 // @lc code=end
-

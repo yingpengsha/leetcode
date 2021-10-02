@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function isHappy(n: number): boolean {
+function isHappy (n: number): boolean {
   const numberCollection = new Set([n])
   while (n !== 1) {
     n = digitsSum(n)
@@ -17,7 +17,7 @@ function isHappy(n: number): boolean {
   return true
 };
 
-function digitsSum(value: number): number {
+function digitsSum (value: number): number {
   let sum = 0
   while (value > 0) {
     const digit = value % 10
@@ -27,4 +27,3 @@ function digitsSum(value: number): number {
   return sum
 }
 // @lc code=end
-

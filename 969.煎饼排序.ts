@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function pancakeSort(arr: number[]): number[] {
+function pancakeSort (arr: number[]): number[] {
   const result = []
   let currentIndex = arr.length - 1
   while (currentIndex >= 0) {
@@ -25,4 +25,3 @@ function pancakeSort(arr: number[]): number[] {
   return result
 };
 // @lc code=end
-

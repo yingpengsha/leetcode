@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function longestWPI(hours: number[]): number {
+function longestWPI (hours: number[]): number {
   let max = 0
   hours.unshift(0)
   const stack: number[] = [0]
@@ -27,4 +27,3 @@ function longestWPI(hours: number[]): number {
   return max
 };
 // @lc code=end
-

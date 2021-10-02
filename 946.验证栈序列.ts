@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function validateStackSequences(pushed: number[], popped: number[]): boolean {
+function validateStackSequences (pushed: number[], popped: number[]): boolean {
   const stack: number[] = []
   while (pushed.length || popped.length) {
     if (stack[stack.length - 1] === popped[0]) {
@@ -22,4 +22,3 @@ function validateStackSequences(pushed: number[], popped: number[]): boolean {
   return true
 };
 // @lc code=end
-

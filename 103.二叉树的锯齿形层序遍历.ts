@@ -19,7 +19,7 @@
  * }
  */
 
-function zigzagLevelOrder(root: TreeNode | null): number[][] {
+function zigzagLevelOrder (root: TreeNode | null): number[][] {
   if (!root) return []
   let currentDeep = [root]
   let rightToLeft = false
@@ -43,4 +43,3 @@ function zigzagLevelOrder(root: TreeNode | null): number[][] {
   return result
 };
 // @lc code=end
-

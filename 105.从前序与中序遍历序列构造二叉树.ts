@@ -19,7 +19,7 @@
  * }
  */
 
- function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
+function buildTree (preorder: number[], inorder: number[]): TreeNode | null {
   if (!preorder.length || !inorder.length) return null
   const root = new TreeNode(preorder.shift())
   const rootIndex = inorder.findIndex(value => value === root.val)
@@ -30,4 +30,3 @@
   return root
 };
 // @lc code=end
-

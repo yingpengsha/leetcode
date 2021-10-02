@@ -6,7 +6,7 @@
 
 // @lc code=start
 let str: string
-function parse(): { head: string, tail: string } {
+function parse (): { head: string, tail: string } {
   const firstChar = str[0]
   let end = 1
   if (!isNaN(+firstChar)) {
@@ -29,7 +29,7 @@ function parse(): { head: string, tail: string } {
     }
   }
 }
-function decodeString(s: string): string {
+function decodeString (s: string): string {
   str = s
   let result = ''
   while (str && str[0] !== ']') {
@@ -40,4 +40,3 @@ function decodeString(s: string): string {
   return result
 };
 // @lc code=end
-
